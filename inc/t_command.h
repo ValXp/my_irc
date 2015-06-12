@@ -11,6 +11,8 @@
 #ifndef T_COMMAND_H_
 # define T_COMMAND_H_
 
+# define UNUSED(x) (void)(x);
+
 typedef int	(*command_t)(t_serveur*, t_client*, char **);
 
 typedef struct		s_command

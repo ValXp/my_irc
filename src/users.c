@@ -48,6 +48,8 @@ int		users(t_serveur *serveur, t_client *client, char **resp)
 {
   t_user	*cur;
 
+  UNUSED(resp)
+  UNUSED(serveur)
   if (resp && resp[0] && resp[1] && !strcmp(resp[1], "all"))
     {
       list_all_users(serveur, client);
@@ -63,7 +65,5 @@ int		users(t_serveur *serveur, t_client *client, char **resp)
       cur = cur->next;
     }
   append_data(client, "\n* listing complete !");
-  serveur = serveur;
-  resp = resp;
   return (0);
 }

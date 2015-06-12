@@ -27,7 +27,7 @@ int		xprintf(char *format, ...)
   va_list	args;
   int		len;
 
-  va_start(args, *format);
+  va_start(args, format);
   if ((len = vprintf(format, args)) < 0)
     exit(EXIT_FAILURE);
   va_end(args);
@@ -39,7 +39,7 @@ int		xfprintf(FILE *file, char *format, ...)
   va_list	args;
   int		len;
 
-  va_start(args, *format);
+  va_start(args, format);
   if ((len = vfprintf(file, format, args)) < 0)
     exit(EXIT_FAILURE);
   va_end(args);
@@ -51,7 +51,7 @@ int		xsprintf(char *str, char *format, ...)
   va_list	args;
   int		len;
 
-  va_start(args, *format);
+  va_start(args, format);
   if ((len = vsprintf(str, format, args)) < 0)
     exit(EXIT_FAILURE);
   va_end(args);
@@ -72,7 +72,7 @@ int		xsscanf(char *string, char *format, ...)
   va_list	args;
   int		len;
 
-  va_start(args, *format);
+  va_start(args, format);
   if ((len = vsscanf(string, format, args)) < 0)
     exit(EXIT_FAILURE);
   va_end(args);

@@ -66,6 +66,7 @@ void		serveur_command(t_serveur *serveur)
   char		buffer[BUFF_SIZE];
   char		*found;
 
+  UNUSED(serveur)
   bzero(buffer, BUFF_SIZE);
   if (read(0, buffer, BUFF_SIZE - 1) < 0)
     printf(WARN "Bad read from stdin !!" END);
@@ -80,5 +81,4 @@ void		serveur_command(t_serveur *serveur)
       free(command);
       exit(EXIT_SUCCESS);
     }
-  serveur = serveur;
 }
