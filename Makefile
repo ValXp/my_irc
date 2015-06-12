@@ -61,7 +61,7 @@ SRC_1	=	src/main_client.c		\
 		src/build_client_set.c		\
 		src/check_before_append.c	\
 
-CFLAGS	=	-W -Wall -ansi -pedantic -Wstrict-prototypes -g -Wformat-security -Wno-format-security
+CFLAGS	=	-W -Wall -ansi -pedantic -Wstrict-prototypes -Wformat-security -Wno-format-security
 
 IFLAGS	=	-I./inc/
 
